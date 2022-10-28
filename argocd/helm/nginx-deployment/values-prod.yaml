@@ -1,5 +1,5 @@
 namespace:
-  name: prod
+  name: nginx-prod
 
 replicaCount: 2
 

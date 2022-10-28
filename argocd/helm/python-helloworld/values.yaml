@@ -1,5 +1,5 @@
 namespace:
-  name: test
+  name: python-test
  
 replicaCount: 3
 

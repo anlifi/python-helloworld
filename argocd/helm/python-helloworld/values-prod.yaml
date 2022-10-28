@@ -1,5 +1,5 @@
 namespace:
-  name: prod
+  name: python-prod
 
 service:
   type: ClusterIP
