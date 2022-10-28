@@ -1,0 +1,23 @@
+namespace:
+  name: test
+ 
+replicaCount: 3
+
+image:
+  repository: anlifi/python-helloworld 
+  tag: v1.0.0
+  pullPolicy: IfNotPresent
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 256Mi
+
+service:
+  port: 5000
+  targetPort: 5000
+  nodePort: 30009
+  type: NodePort
+
+configmap:
+  data: "version: v1.0.0"
