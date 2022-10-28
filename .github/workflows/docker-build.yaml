@@ -24,5 +24,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          file: app/Dockerfile
           push: true
           tags: angelinafischer93/python-helloworld:latest
