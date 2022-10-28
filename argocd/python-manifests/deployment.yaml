@@ -24,7 +24,7 @@ spec:
         tag: latest
     spec:
       containers:
-      - image: angelinafischer93/python-helloworld:latest
+      - image: angelinafischer93/python-helloworld:v1.0.0
         imagePullPolicy: IfNotPresent
         name: python-helloworld
         resources:
