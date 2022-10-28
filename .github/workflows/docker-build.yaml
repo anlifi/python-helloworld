@@ -26,6 +26,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./app
-          file: Dockerfile
           push: true
           tags: angelinafischer93/python-helloworld:latest
