@@ -4,7 +4,7 @@ namespace:
 replicaCount: 3
 
 image:
-  repository: anlifi/python-helloworld 
+  repository: angelinafischer93/python-helloworld 
   tag: v1.0.0
   pullPolicy: IfNotPresent
 
