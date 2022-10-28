@@ -1,2 +1,5 @@
 namespace:
   name: prod
+
+service:
+  type: ClusterIP
