@@ -8,7 +8,7 @@ metadata:
   namespace: app
 spec:
   ports:
-  - port: 6111
+  - port: 80
     protocol: TCP
     targetPort: 6111
     nodePort: 30009
