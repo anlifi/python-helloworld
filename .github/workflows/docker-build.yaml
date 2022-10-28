@@ -27,4 +27,4 @@ jobs:
         with:
           context: ./app
           push: true
-          tags: angelinafischer93/python-helloworld:latest
+          tags: angelinafischer93/python-helloworld:v1.0.0
