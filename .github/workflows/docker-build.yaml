@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # already uses Git context, so no actions/checkout action needed
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
@@ -24,6 +25,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: app/Dockerfile
+          context: ./app
+          file: Dockerfile
           push: true
           tags: angelinafischer93/python-helloworld:latest
