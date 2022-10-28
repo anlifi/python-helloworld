@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: python-helloworld
+    tag: latest
+  name: python-helloworld
+  namespace: app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-helloworld
+      tag: latest
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: python-helloworld
+        tag: latest
+    spec:
+      containers:
+      - image: angelinafischer93/python-helloworld:latest
+        imagePullPolicy: IfNotPresent
+        name: python-helloworld
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
