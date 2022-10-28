@@ -3,16 +3,14 @@ kind: Service
 metadata:
   labels:
     app: python-helloworld
-    tag: latest
   name: python-helloworld
   namespace: app
 spec:
   ports:
-  - port: 6111
+  - port: 5000
     protocol: TCP
-    targetPort: 6111
+    targetPort: 5000
     nodePort: 30009
   selector:
     app: python-helloworld
-    tag: latest
   type: NodePort

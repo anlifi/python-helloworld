@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   labels:
     app: python-helloworld
-    tag: latest
   name: python-helloworld
   namespace: app
 spec:
@@ -11,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: python-helloworld
-      tag: latest
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -21,7 +19,6 @@ spec:
     metadata:
       labels:
         app: python-helloworld
-        tag: latest
     spec:
       containers:
       - image: angelinafischer93/python-helloworld:v1.0.0
@@ -32,4 +29,4 @@ spec:
             cpu: 50m
             memory: 256Mi
         ports:
-          - containerPort: 6111
+          - containerPort: 5000
